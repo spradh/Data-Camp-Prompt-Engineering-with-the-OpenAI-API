@@ -2,10 +2,12 @@ client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
 # Craft a prompt to transform the text
 prompt = f"""
-Proofread the following text adn adjust tone to be formal and friendly.
+Transform the text delimited by backticks with the following two steps:
+- Proofread the text without changing its structure
+- Adjust tone to be formal and friendly
 
 Text:
-{text}
+```{text}```
 """
 
 response = get_response(prompt)
